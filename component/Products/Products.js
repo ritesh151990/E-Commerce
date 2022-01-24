@@ -1,4 +1,3 @@
-import Card from "../UI/Card";
 import ProductList from "./ProductList";
 
 const productsArr = [
@@ -32,11 +31,11 @@ const Products = (prpps) => {
     <ProductList title={prod.title} img={prod.imageUrl} price={prod.price} />
   ));
   return (
-    <Card>
-      <div>
+    <div>
+      <div className="d-flex justify-content-around">
         <ul>{listProduct}</ul>
       </div>
-    </Card>
+    </div>
   );
 };
 

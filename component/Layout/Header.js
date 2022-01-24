@@ -6,16 +6,16 @@ const Header = (props) => {
     <Fragment>
       <div className="up">
         <h3 className="h3">
-          <a className="a" href=" ">
+          <a className="heada" href=" ">
             HOME
           </a>
-          <a className="a" href=" ">
+          <a className="heada" href=" ">
             STORE
           </a>
-          <a className="a" href=" ">
+          <a className="heada" href=" ">
             ABOUT
           </a>
-          <button className="butt">Cart</button>
+          <button className="butt" onClick={props.cart}>Cart</button>
         </h3>
       </div>
       <div className="down">
