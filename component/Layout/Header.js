@@ -1,6 +1,7 @@
 import { Fragment, useContext } from 'react';
+import { NavLink } from 'react-router-dom';
 import CartConext from '../../Store/cart-context';
-import './Header.css';
+import './Header.css'
 
 const Header = (props) => {
     const cartCtx = useContext(CartConext);
@@ -11,19 +12,21 @@ const Header = (props) => {
   return (
     <Fragment>
       <div className="up">
-        <h3 className="h3">
+        <nav className="h3">
           <a className="heada" href=" ">
             HOME
           </a>
           <a className="heada" href=" ">
             STORE
           </a>
-          <a className="heada" href=" ">
+          <NavLink  to="/about">
             ABOUT
-          </a>
-          <button className="butt" onClick={props.cart}>Cart</button>
-          <span className='num'>{number}</span>
-        </h3>
+          </NavLink>
+          <button className="butt" onClick={props.cart}>
+            Cart
+          </button>
+          <span className="num">{number}</span>
+        </nav>
       </div>
       <div className="down">
         <h1 className="h1">The Generics</h1>
