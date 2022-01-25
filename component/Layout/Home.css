@@ -1,0 +1,23 @@
+.downHome{
+    background-color: grey;
+    text-align: center;
+    height: 40vh;
+}
+
+.album, .play{
+    margin: 10px;
+}
+
+.play{
+    border-radius: 100%;
+}
+
+.tours{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.pur,.data{
+    margin-bottom: 10px;
+}

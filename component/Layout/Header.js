@@ -13,13 +13,13 @@ const Header = (props) => {
     <Fragment>
       <div className="up">
         <nav className="h3">
-          <a className="heada" href=" ">
+          <NavLink className="heada" to="/home">
             HOME
-          </a>
-          <a className="heada" href=" ">
+          </NavLink>
+          <NavLink className="heada" activeStyle={{ color: "red" }} to="/store">
             STORE
-          </a>
-          <NavLink  to="/about">
+          </NavLink>
+          <NavLink className="heada" to="/about">
             ABOUT
           </NavLink>
           <button className="butt" onClick={props.cart}>
