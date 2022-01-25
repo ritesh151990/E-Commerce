@@ -1,10 +1,12 @@
 .cart{
     background-color: white;
     width: 30vw;
-    height: auto;
+    height: 60vh;
     position: absolute;
     top: 70px;
     right: 30px;
+    overflow: scroll;
+    text-align: center;
 }
 
 .Header{
@@ -20,4 +22,8 @@
 .X{
     position: absolute;
     right: 20px;
+}
+
+.purchase{
+    margin-top: 20px;
 }

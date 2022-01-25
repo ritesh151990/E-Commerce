@@ -1,7 +1,13 @@
-import { Fragment } from 'react';
+import { Fragment, useContext } from 'react';
+import CartConext from '../../Store/cart-context';
 import './Header.css';
 
 const Header = (props) => {
+    const cartCtx = useContext(CartConext);
+
+    const number = cartCtx.items.reduce((currNum,item) => {
+        return currNum + 1;
+    },0)
   return (
     <Fragment>
       <div className="up">
@@ -16,6 +22,7 @@ const Header = (props) => {
             ABOUT
           </a>
           <button className="butt" onClick={props.cart}>Cart</button>
+          <span className='num'>{number}</span>
         </h3>
       </div>
       <div className="down">

@@ -1,34 +1,26 @@
 import Modal from "./Modal";
 import './Cart.css';
 import CartItems from "./CartItems";
+import { useContext } from "react";
+import CartContext from "../../Store/cart-context";
 
-const cartElements = [
-  {
-    title: "Colors",
-    price: 100,
-    imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%201.png",
-    quantity: 2,
-  },
 
-  {
-    title: "Black and white Colors",
-    price: 50,
-    imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%202.png",
-    quantity: 3,
-  },
-
-  {
-    title: "Yellow and Black Colors",
-    price: 70,
-    imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%203.png",
-    quantity: 1,
-  },
-];
 
 
 
 const Cart = props => {
-    const cartList = cartElements.map((list) => <CartItems item={list.title} img={list.imageUrl} price={list.price} amount={list.quantity}/>);
+    const cartCtx = useContext(CartContext);
+    const quantity = 1;
+    const cartList = cartCtx.items.map((list) => <CartItems item={list.title} img={list.imageUrl} price={list.price} amount={quantity}/>);
+
+    const messageHandler = () => {
+        if(cartList.length !== 0){
+            alert('ThankYou For Purchasing !')
+        }else{
+            alert('Please Add Items To Cart !')
+        }
+    }
+
     return (
       <Modal>
         <div className="cart">
@@ -51,7 +43,12 @@ const Cart = props => {
               </div>
             </div>
           </div>
-          {cartList}
+          <div>{cartList}</div>
+          <div className="row">
+            <div className="col">
+              <button className="btn btn-primary purchase" onClick={messageHandler}>Purchase</button>
+            </div>
+          </div>
         </div>
       </Modal>
     );

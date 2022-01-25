@@ -24,12 +24,18 @@
 
 .butt{
     position: absolute;
-    right: 30px;
+    right: 50px;
     border-color: rgba(0, 153, 255, 0.616);
     color: white;
     background-color: black;
     border-radius: 5px;
     padding: 5px;
+}
+
+.num{
+    position: absolute;
+    right: 30px;
+    color: white;
 }
 
 .h1{
