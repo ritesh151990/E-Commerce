@@ -24,6 +24,12 @@ const About = () => {
             >
               ABOUT
             </NavLink>
+            <NavLink
+              className="heada"
+              to="/contact-us"
+            >
+              CONTACT-US
+            </NavLink>
           </nav>
         </div>
         <div className="down">

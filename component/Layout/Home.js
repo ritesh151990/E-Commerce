@@ -23,6 +23,9 @@ const Home = () => {
             <NavLink className="heada" to="/about">
               ABOUT
             </NavLink>
+            <NavLink className="heada" to="/contact-us">
+              CONTACT-US
+            </NavLink>
           </nav>
         </div>
         <div className="downHome">
